@@ -11,7 +11,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
-import transporter from '../config/nodemailer.js'
+import transporter from "#config/nodemailer.js";
 dotenv.config()
 
 try {

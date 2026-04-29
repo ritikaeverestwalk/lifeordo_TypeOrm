@@ -5,7 +5,7 @@ import {Column, PrimaryGeneratedColumn, Entity, CreateDateColumn} from "typeorm"
 @Entity()
     export class User{
         @PrimaryGeneratedColumn("uuid")
-        id!: number;
+        id!: string;
 
         @Column({type: "text"})
         name!: string;
@@ -17,23 +17,23 @@ import {Column, PrimaryGeneratedColumn, Entity, CreateDateColumn} from "typeorm"
         password!: string;
 
         @Column({type:"text", nullable: true})
-        verifyotp!: string;
+        verifyotp?: string;
 
         @Column({type:"bigint", nullable: true})
-        verifyotpexpiry!: number;
+        verifyotpexpiry?: number;
 
         @Column({type:"boolean", default:true})
-        isverified!: string;
+        isverified!: boolean;
 
         @Column({type:"text", nullable: true})
-        resetotp!: string;
+        resetotp?: string;
 
         @Column({type:"bigint", nullable: true})
-        resetotpexpiry!: number;
+        resetotpexpiry?: number;
 
         @CreateDateColumn({type:"timestamp"})
         createdat!: Date;
 
         @Column({type:"boolean", default:true})
-        isloggedin!: string;
+        isloggedin!: boolean;
     }

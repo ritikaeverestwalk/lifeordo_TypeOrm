@@ -13,7 +13,8 @@ export const myDataSource = new DataSource({
     username:  process.env.DB_USER,
     password:  process.env.DB_PASSWORD,
     database:  process.env.DB_NAME,
-    entities: ["src/entity/*"],
+    //entities: ["src/entity/*"],
+    entities: [User],
     logging: true,
     synchronize: true,
 })
