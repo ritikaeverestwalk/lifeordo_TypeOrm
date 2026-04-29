@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/node-22/tsconfig.json",
+
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+     "strictPropertyInitialization": true,
+   
+    "paths": {
+      "@/*": ["src/*"],
+    }
+    
+  },
+  "include": ["src/**/*"]
+}
